@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>{{title}}</title>
+  </head>
+
+     <body>
+          {{clist}}
+     </body>
+
+     <body>
+           {% for n in clist %}
+           <div>{{forloop.counter}} {{n}}</div>
+           {% endfor %}
+          <br/>
+          <table border="5"cellpadding="10" >
+                <tr>
+                    <th> Name </th>
+                    <th> Phone Number </th>
+                    <th> District </th>
+                    <th> Country </th>
+                </tr>
+
+                {% for d in student_details %}
+                <tr>
+                    <td>{{d.name}}</td>
+                    <td>{{d.phone}}</td>
+                    <td>{{d.District}}</td>
+                    <td>{{d.Country}}</td>
+                </tr>
+                {% endfor %}
+
+          </table>
+     </body>
+</html>
